@@ -464,6 +464,18 @@ html[data-theme="dark"] .eyebrow {
 }
 .text-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
+/* 项目卡片底部双链接：介绍页 + 仓库 */
+.project-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+.project-links-row .text-link { margin-top: 0; }
+.link-secondary { color: var(--muted); }
+.link-secondary:hover { color: var(--accent); }
+
 /* ---------- timeline ---------- */
 .timeline {
   list-style: none;
@@ -511,7 +523,7 @@ html[data-theme="dark"] .eyebrow {
 /* ---------- contact ---------- */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 14px;
 }
 .contact-card {
