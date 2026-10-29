@@ -94,6 +94,8 @@ window.I18N = {
     "contact.wechat": "微信",
     "contact.qrHint": "点击查看二维码",
     "contact.qrNote": "添加时请备注来意",
+    "contact.gitee": "代码托管（Gitee）",
+    "contact.github": "GitHub（备用）",
 
     "footer.note": "用静态页面手工写成 · 无框架 · 无追踪"
   },
@@ -192,6 +194,8 @@ window.I18N = {
     "contact.wechat": "WeChat",
     "contact.qrHint": "Click to show QR code",
     "contact.qrNote": "Please mention how you found me",
+    "contact.gitee": "Code (Gitee)",
+    "contact.github": "GitHub (backup)",
 
     "footer.note": "Hand-written static site · no framework · no tracking"
   }
