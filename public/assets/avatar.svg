@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img" aria-label="Programmer avatar illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8eeff"/>
+      <stop offset="100%" stop-color="#f5f7ff"/>
+    </linearGradient>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b5bfd"/>
+      <stop offset="100%" stop-color="#2a45d8"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd7b8"/>
+      <stop offset="100%" stop-color="#f6c39c"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2f3a"/>
+      <stop offset="100%" stop-color="#1b1f27"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="320" height="320" rx="72" fill="url(#bg)"/>
+  <circle cx="256" cy="66" r="34" fill="#dfe7ff" opacity=".85"/>
+  <circle cx="58" cy="248" r="26" fill="#e6ecff" opacity=".9"/>
+
+  <!-- body / hoodie -->
+  <path d="M74 292c4-52 38-80 86-80s82 28 86 80z" fill="url(#hoodie)"/>
+  <path d="M132 214c8 10 18 15 28 15s20-5 28-15l-10-14h-36z" fill="#2238b8"/>
+  <!-- hoodie strings -->
+  <path d="M146 226v26M174 226v26" stroke="#dfe6ff" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+  <circle cx="146" cy="254" r="4" fill="#dfe6ff" opacity=".9"/>
+  <circle cx="174" cy="254" r="4" fill="#dfe6ff" opacity=".9"/>
+
+  <!-- neck -->
+  <rect x="146" y="180" width="28" height="26" rx="12" fill="#f0b98f"/>
+
+  <!-- head -->
+  <ellipse cx="160" cy="132" rx="52" ry="56" fill="url(#skin)"/>
+  <!-- ears -->
+  <circle cx="108" cy="136" r="10" fill="#f4c29e"/>
+  <circle cx="212" cy="136" r="10" fill="#f4c29e"/>
+
+  <!-- hair -->
+  <path d="M106 124c2-34 24-54 54-54s52 20 54 54c-8-12-18-18-28-20-8 10-24 14-40 12-16-2-30 2-40 8z" fill="url(#hair)"/>
+  <path d="M112 118c6-8 14-12 22-13" stroke="#404652" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+
+  <!-- eyebrows -->
+  <path d="M132 120c5-4 12-4 17-1" stroke="#2a2f3a" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M171 119c5-3 12-3 17 1" stroke="#2a2f3a" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- glasses -->
+  <g fill="none" stroke="#2b3240" stroke-width="4">
+    <rect x="124" y="128" width="34" height="28" rx="10"/>
+    <rect x="162" y="128" width="34" height="28" rx="10"/>
+    <path d="M158 140h4"/>
+    <path d="M124 138l-12-3M196 138l12-3"/>
+  </g>
+  <!-- eyes -->
+  <circle cx="141" cy="142" r="3.6" fill="#2b3240"/>
+  <circle cx="179" cy="142" r="3.6" fill="#2b3240"/>
+
+  <!-- nose -->
+  <path d="M160 148v10" stroke="#e0a077" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+
+  <!-- smile -->
+  <path d="M146 170c8 7 20 7 28 0" stroke="#c97f57" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+  <!-- blush -->
+  <ellipse cx="126" cy="160" rx="7" ry="4" fill="#f3a98a" opacity=".45"/>
+  <ellipse cx="194" cy="160" rx="7" ry="4" fill="#f3a98a" opacity=".45"/>
+
+  <!-- laptop -->
+  <g transform="translate(0 6)">
+    <rect x="92" y="264" width="136" height="10" rx="5" fill="#cfd8f5"/>
+    <rect x="104" y="244" width="112" height="22" rx="5" fill="#e6ebfb" stroke="#c3cdf0" stroke-width="2"/>
+    <path d="M120 254h18M144 254h10M160 254h20" stroke="#9fb0e6" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- floating code chips -->
+  <g opacity=".9">
+    <rect x="228" y="150" width="46" height="20" rx="10" fill="#ffffff" stroke="#dbe3fb"/>
+    <text x="251" y="164" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#3b5bfd" text-anchor="middle">{ }</text>
+    <rect x="44" y="96" width="46" height="20" rx="10" fill="#ffffff" stroke="#dbe3fb"/>
+    <text x="67" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#3b5bfd" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+</svg>

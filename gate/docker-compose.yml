@@ -1,0 +1,31 @@
+# 简历门禁服务（部署在 ali-light）
+# 与 Caddy 同处 compose_edge 网络，由 Caddy 反代 /resume* 路径
+services:
+  resume-gate:
+    build: .
+    image: resume-gate:latest
+    container_name: resume-gate
+    restart: unless-stopped
+    environment:
+      # 提取码：默认 0000，部署后请在 .env 中改成手机尾号
+      - RESUME_CODE=${RESUME_CODE:-0000}
+      - GATE_SECRET=${GATE_SECRET:-change-me-in-env}
+      - RESUME_PDF=/data/resume.pdf
+      - MAX_ATTEMPTS=${MAX_ATTEMPTS:-5}
+      - WINDOW_SECONDS=${WINDOW_SECONDS:-900}
+      - COOKIE_TTL=${COOKIE_TTL:-1800}
+    volumes:
+      # 简历放在 web 根目录之外，只能经门禁读取
+      - /home/admin/resume:/data:ro
+    networks:
+      - edge
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "3"
+
+networks:
+  edge:
+    external: true
+    name: compose_edge

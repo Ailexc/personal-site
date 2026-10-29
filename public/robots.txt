@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /resume
+Disallow: /resume/
+
+Sitemap: https://ailexc.com/sitemap.xml

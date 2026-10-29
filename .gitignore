@@ -1,0 +1,11 @@
+# 简历原文件不入库（仅部署到服务器 /home/admin/resume/）
+private/
+*.pdf
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.env.*
+!.env.example
