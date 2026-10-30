@@ -4,6 +4,7 @@ window.I18N = {
     "nav.work": "作品",
 
     "hero.eyebrow": "求职中 · 北京 · 可出差 · 8 年经验",
+    "hero.suffix": "· 作品主页",
     "hero.title": "AI Agent 工程 · 平台工程",
     "hero.fact.platform": "平台工程",
     "hero.tag.auth": "统一认证",
@@ -42,7 +43,7 @@ window.I18N = {
     "work.viewRepo": "查看仓库 →",
     "work.viewIntro": "查看介绍页 →",
     "work.viewLive": "在线预览 →",
-    "work.devops.kicker": "独立设计与开发 · 七个系统",
+    "work.devops.kicker": "核心开发 · 七个系统",
     "work.devops.desc": "七套内部系统 + 统一网关 + 共享数据层，串成「登录 → 权限 → 资源 → 发布 → 事件 → 工单」一条完整链路。统一身份、权限模型、多云适配都在其中。",
     "work.devops.h1": "<b>统一身份：</b>RS256 JWT + 网关 forwardAuth + OIDC 授权码，七系统单点登录。",
     "work.devops.h2": "<b>权限模型演进：</b>从「用户—应用—环境」三元组实例授权，重构为资源树 + 策略授权的 ABAC-Lite。",
@@ -66,6 +67,7 @@ window.I18N = {
     "nav.work": "Work",
 
     "hero.eyebrow": "Open to work · Beijing · Available for travel · 8 yrs",
+    "hero.suffix": "· Portfolio",
     "hero.title": "AI Agent Engineering · Platform Engineering",
     "hero.fact.platform": "Platform",
     "hero.tag.auth": "Unified Auth",
@@ -104,7 +106,7 @@ window.I18N = {
     "work.viewRepo": "View repository →",
     "work.viewIntro": "Read case study →",
     "work.viewLive": "Live demo →",
-    "work.devops.kicker": "Designed and built solo · seven systems",
+    "work.devops.kicker": "Core developer · seven systems",
     "work.devops.desc": "Seven internal systems with a shared gateway and data layer, connected into one flow: login → permissions → resources → releases → events → tickets. Unified identity, permission model, and multi-cloud adaptation all live here.",
     "work.devops.h1": "<b>Unified identity:</b> RS256 JWT + gateway forwardAuth + OIDC authorization code, single sign-on across seven systems.",
     "work.devops.h2": "<b>Permission model evolution:</b> from user–app–environment tuple grants to a resource-tree + policy ABAC-Lite model.",

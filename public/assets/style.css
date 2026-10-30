@@ -203,6 +203,15 @@ html[data-theme="dark"] .eyebrow {
   font-weight: 800;
 }
 
+/* h1 后缀：用小于名字的字号与弱化色，避免大字撑开 */
+.h1-suffix {
+  font-size: .34em;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
 .hero-title {
   margin: 14px 0 0;
   font-size: clamp(20px, 2.4vw, 27px);
