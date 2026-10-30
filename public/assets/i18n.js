@@ -8,7 +8,7 @@ window.I18N = {
 
     "hero.eyebrow": "求职中 · 北京 · 可出差",
     "hero.title": "AI Agent 工程 · 平台工程",
-    "hero.sub": "六年企业级平台开发，最近一年把工程能力带到 AI Agent 方向——多 Agent 编排、RAG 检索、流式对话与成本控制。",
+    "hero.sub": "六年平台工程，一年 Agent 实践——习惯把系统做到能演示、能交付、能算清成本。",
     "hero.role1": "AI Agent 工程（转岗中）",
     "hero.role2": "DevOps / 平台开发",
     "hero.role3": "全栈开发",
@@ -22,9 +22,9 @@ window.I18N = {
     "stats.ai": "个 AI 工程项目",
 
     "about.title": "关于我",
-    "about.p1": "六年企业级平台开发，最近一年把重心转向 AI Agent 工程：多 Agent 编排、RAG 检索、流式对话、工具调用与成本控制，独立完成三个可运行的项目。",
-    "about.p2": "之前的六年做 DevOps 工具链——CMDB、权限、发布、事件、工单、多云管理。习惯从一个想法开始，把产品设计、架构设计、后端实现、前端联调和容器化交付一路做到底。",
-    "about.p3": "写代码偏框架化：希望别人接手时像在用一套内部框架——约定清晰、扩展点明确、加需求不用改老代码。",
+    "about.p1": "六年 DevOps 平台工程：从 CMDB、统一认证、权限中心，到发布、事件、工单、多云管理——把配置、权限、交付、运维串成一条完整链路。习惯一件事从产品设计、架构设计、后端实现、前端联调，一路做到容器化交付。",
+    "about.p2": "最近一年把同一套工程方法带到 AI 方向：多 Agent 编排、RAG 检索、流式对话、工具调用与 Token 成本控制，独立完成三个可运行的项目。做下来越发觉得，Agent 系统和平台系统最难的地方是同一件事——边界、约定与可观测性。",
+    "about.p3": "几条自己比较在意的习惯：代码写成框架而不是脚本，约定清晰、扩展点明确，加需求尽量不动老代码；先跑通最小闭环再抽象，三个 AI 项目都是推翻重来过；文档与演示同源，站上每个系统都能点开操作，图和截图都来自真实运行；对成本敏感，线上 Demo 从 2C4G 起步，每个服务的常驻内存都算得清。",
 
     "facts.location": "所在地",
     "facts.locationValue": "北京 · 可出差",
@@ -109,7 +109,7 @@ window.I18N = {
 
     "hero.eyebrow": "Open to work · Beijing · Available for travel",
     "hero.title": "AI Agent Engineering · Platform Engineering",
-    "hero.sub": "Six years building enterprise platforms. For the past year I have been bringing that engineering discipline to AI agents — multi-agent orchestration, RAG, streaming, and cost control.",
+    "hero.sub": "Six years in platform engineering, one year into agents — I like building systems that can be demoed, delivered, and costed.",
     "hero.role1": "AI Agent Engineering (transitioning)",
     "hero.role2": "DevOps / Platform",
     "hero.role3": "Full-stack",
@@ -123,9 +123,9 @@ window.I18N = {
     "stats.ai": "AI engineering projects",
 
     "about.title": "About",
-    "about.p1": "Six years of enterprise platform development. Over the past year I have shifted focus to AI agent engineering: multi-agent orchestration, RAG, streaming, tool calling, and cost control — with three runnable projects built end to end.",
-    "about.p2": "The previous six years were DevOps tooling — CMDB, IAM, release, events, ticketing, and multi-cloud management. I like taking an idea from product and architecture through backend, frontend, and containerized delivery.",
-    "about.p3": "I tend to write code like an internal framework: clear conventions, explicit extension points, and new features that don't require rewriting the old ones.",
+    "about.p1": "Six years in DevOps platform engineering: CMDB, unified authentication, and an IAM center, through release, events, ticketing, and multi-cloud management — configuration, permissions, delivery, and operations wired into one chain. I like taking a thing from product design and architecture through backend, frontend, and containerized delivery.",
+    "about.p2": "Over the past year I have brought the same engineering method to AI: multi-agent orchestration, RAG, streaming, tool calling, and token cost control — with three runnable projects built end to end. The longer I work on it, the clearer it gets that agents and platforms are hard in the same places: boundaries, conventions, and observability.",
+    "about.p3": "A few habits I care about: writing code as a framework rather than a script — clear conventions, explicit extension points, new features that mostly leave old code alone; getting a minimal end-to-end loop running before abstracting (all three AI projects were rewritten at least once); keeping docs and demos from the same source, where every system here is clickable and every diagram or screenshot comes from a real run; and staying cost-aware — the live demo starts from 2 vCPU / 4 GB, and I know each service's resident memory.",
 
     "facts.location": "Location",
     "facts.locationValue": "Beijing · open to travel",
