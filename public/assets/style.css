@@ -163,10 +163,8 @@ code {
 
 /* ---------- hero ---------- */
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-  gap: 48px;
-  align-items: center;
+  /* 单栏：头像已移除，自我介绍改为列表式（hero-facts） */
+  display: block;
   padding: 76px 24px 56px;
 }
 
@@ -213,11 +211,49 @@ html[data-theme="dark"] .eyebrow {
   color: var(--text);
 }
 
-.hero-sub {
-  margin: 16px 0 0;
-  max-width: 560px;
+/* Hero 概览列表：左侧维度名 + 右侧标签组，扫读优先 */
+.hero-facts {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+  max-width: 860px;
+}
+.hero-facts li {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.hero-facts-key {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--muted);
+  letter-spacing: .3px;
+  padding-top: 5px;
+  white-space: nowrap;
+}
+.hero-facts-val {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag-sm {
+  font-size: 12px;
+  padding: 2px 9px;
+  line-height: 1.7;
+}
+.hero-facts-path {
+  display: block;
+  font-size: 14.5px;
   color: var(--text-2);
-  font-size: 16.5px;
+  line-height: 1.75;
+  padding-top: 3px;
+}
+@media (max-width: 640px) {
+  .hero-facts li { grid-template-columns: 1fr; gap: 6px; }
+  .hero-facts-key { padding-top: 0; }
 }
 
 .hero-tags { margin-top: 22px; }
