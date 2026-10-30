@@ -473,6 +473,26 @@ html[data-theme="dark"] .eyebrow {
   padding-top: 4px;
 }
 .project-links-row .text-link { margin-top: 0; }
+/* 在线预览：可点击演示入口，用强调色 + 前置小圆点区分 */
+.link-live {
+  color: var(--accent);
+  font-weight: 600;
+}
+.link-live::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  vertical-align: middle;
+  animation: live-pulse 2s ease-in-out infinite;
+}
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
 .link-secondary { color: var(--muted); }
 .link-secondary:hover { color: var(--accent); }
 
