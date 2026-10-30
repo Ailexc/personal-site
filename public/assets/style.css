@@ -244,13 +244,6 @@ html[data-theme="dark"] .eyebrow {
   padding: 2px 9px;
   line-height: 1.7;
 }
-.hero-facts-path {
-  display: block;
-  font-size: 14.5px;
-  color: var(--text-2);
-  line-height: 1.75;
-  padding-top: 3px;
-}
 @media (max-width: 640px) {
   .hero-facts li { grid-template-columns: 1fr; gap: 6px; }
   .hero-facts-key { padding-top: 0; }
@@ -262,7 +255,7 @@ html[data-theme="dark"] .eyebrow {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .btn {
@@ -307,23 +300,28 @@ html[data-theme="dark"] .eyebrow {
 .hero-figure img { position: relative; z-index: 1; width: min(320px, 78vw); }
 
 /* ---------- stats ---------- */
-.stats {
+/* Hero 内嵌关键数据：3 列，上下细分隔线，与列表/CTA 分层 */
+.hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  padding-bottom: 20px;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 40px;
+  margin-top: 30px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  max-width: 620px;
+}
+@media (max-width: 640px) {
+  .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
 }
 .stat {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 18px 20px;
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 .stat strong {
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1.1;
   letter-spacing: -1px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
@@ -630,6 +628,17 @@ html[data-theme="dark"] .eyebrow {
   color: var(--muted);
 }
 .footer-inner p { margin: 0; }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.footer-links a {
+  color: var(--text-2);
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-links a:hover { color: var(--accent); text-decoration: underline; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 960px) {

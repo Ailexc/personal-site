@@ -26,7 +26,6 @@
     </a>
     <nav class="nav" aria-label="主导航">
       <a href="#work" data-i18n="nav.work">作品</a>
-      <a href="#contact" data-i18n="nav.contact">联系</a>
     </nav>
     <div class="header-actions">
       <button class="icon-btn" id="langToggle" type="button" aria-label="切换语言">EN</button>
@@ -70,8 +69,10 @@
           </span>
         </li>
         <li>
-          <span class="hero-facts-key" data-i18n="hero.fact.path">工作经历</span>
-          <span class="hero-facts-val hero-facts-path" data-i18n="hero.fact.pathValue">网络与服务器运维 → 后端开发 → DevOps 平台 → Agent</span>
+          <span class="hero-facts-key" data-i18n="hero.fact.path">历程</span>
+          <span class="hero-facts-val">
+            <span class="tag tag-sm" data-i18n="hero.tag.ops">网络与服务器运维</span><span class="tag tag-sm" data-i18n="hero.tag.backendDev">后端开发</span><span class="tag tag-sm" data-i18n="hero.tag.platformDev">DevOps 平台</span><span class="tag tag-sm" data-i18n="hero.tag.agentDev">Agent</span>
+          </span>
         </li>
       </ul>
       <div class="tags hero-tags" aria-label="岗位方向">
@@ -79,20 +80,17 @@
         <span class="tag" data-i18n="hero.role2">DevOps / 平台开发</span>
         <span class="tag" data-i18n="hero.role3">全栈开发</span>
       </div>
+      <div class="hero-stats" aria-label="关键数据">
+        <div class="stat"><strong>8</strong><span data-i18n="stats.years">年工程经验</span></div>
+        <div class="stat"><strong>7</strong><span data-i18n="stats.systems">个可运行系统</span></div>
+        <div class="stat"><strong>3</strong><span data-i18n="stats.ai">个 AI 项目</span></div>
+      </div>
       <div class="cta-row">
         <a class="btn btn-primary" href="#work" data-i18n="hero.ctaWork">查看作品</a>
-        <a class="btn" href="https://portal.devops.ailexc.com" target="_blank" rel="noopener" data-i18n="hero.ctaDemo">在线 Demo</a>
         <a class="btn" href="https://gitee.com/ailexc-code" target="_blank" rel="noopener">Gitee</a>
         <a class="btn btn-ghost" href="/resume" data-i18n="hero.ctaResume">下载简历</a>
       </div>
     </div>
-  </section>
-
-  <!-- Stats -->
-  <section class="wrap stats" aria-label="关键数据">
-    <div class="stat"><strong>8</strong><span data-i18n="stats.years">年工程经验</span></div>
-    <div class="stat"><strong>7</strong><span data-i18n="stats.systems">个可运行系统</span></div>
-    <div class="stat"><strong>3</strong><span data-i18n="stats.ai">个 AI 项目</span></div>
   </section>
 
   <!-- Work -->
@@ -154,45 +152,17 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="wrap section" id="contact">
-    <div class="section-head">
-      <span class="section-no">02</span>
-      <h2 data-i18n="contact.title">联系我</h2>
-    </div>
-    <div class="contact-grid">
-      <a class="contact-card" href="mailto:1601058771@qq.com">
-        <span class="contact-label" data-i18n="contact.email">邮箱</span>
-        <span class="contact-value">1601058771@qq.com</span>
-      </a>
-      <a class="contact-card" href="mailto:ailexc.gmail@gmail.com">
-        <span class="contact-label" data-i18n="contact.emailAlt">备用邮箱</span>
-        <span class="contact-value">ailexc.gmail@gmail.com</span>
-      </a>
-      <a class="contact-card" href="https://gitee.com/ailexc-code" target="_blank" rel="noopener">
-        <span class="contact-label" data-i18n="contact.gitee">代码托管（Gitee）</span>
-        <span class="contact-value">gitee.com/ailexc-code</span>
-      </a>
-      <a class="contact-card" href="https://github.com/Ailexc" target="_blank" rel="noopener">
-        <span class="contact-label" data-i18n="contact.github">GitHub（备用）</span>
-        <span class="contact-value">github.com/Ailexc</span>
-      </a>
-      <button class="contact-card contact-qr" type="button" id="qrToggle" aria-expanded="false">
-        <span class="contact-label" data-i18n="contact.wechat">微信</span>
-        <span class="contact-value" data-i18n="contact.qrHint">点击查看二维码</span>
-      </button>
-    </div>
-    <div class="qr-panel" id="qrPanel" hidden>
-      <img src="/assets/wechat-qr.svg" alt="微信二维码" width="200" height="200" loading="lazy" />
-      <p class="muted" data-i18n="contact.qrNote">添加时请备注来意</p>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <p>© <span id="year">2026</span> ailexc</p>
-    <p class="muted" data-i18n="footer.note">用静态页面手工写成 · 无框架 · 无追踪</p>
+    <div class="footer-links">
+      <a href="mailto:1601058771@qq.com">1601058771@qq.com</a>
+      <a href="https://gitee.com/ailexc-code" target="_blank" rel="noopener">Gitee</a>
+      <a href="https://github.com/Ailexc" target="_blank" rel="noopener">GitHub</a>
+      <a href="/resume" data-i18n="hero.ctaResume">下载简历</a>
+    </div>
+    <p class="muted">© <span id="year">2026</span> ailexc · <span data-i18n="footer.note">用静态页面手工写成 · 无框架 · 无追踪</span></p>
   </div>
 </footer>
 

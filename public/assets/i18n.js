@@ -2,7 +2,6 @@
 window.I18N = {
   zh: {
     "nav.work": "作品",
-    "nav.contact": "联系",
 
     "hero.eyebrow": "求职中 · 北京 · 可出差 · 8 年经验",
     "hero.title": "AI Agent 工程 · 平台工程",
@@ -21,13 +20,15 @@ window.I18N = {
     "hero.tag.toolcall": "工具调用",
     "hero.tag.tokencost": "Token 成本控制",
     "hero.fact.fullstack": "全栈交付",
-    "hero.fact.path": "工作经历",
-    "hero.fact.pathValue": "网络与服务器运维 → 后端开发 → DevOps 平台 → Agent",
+    "hero.fact.path": "历程",
+    "hero.tag.ops": "网络与服务器运维",
+    "hero.tag.backendDev": "后端开发",
+    "hero.tag.platformDev": "DevOps 平台",
+    "hero.tag.agentDev": "Agent",
     "hero.role1": "AI Agent 工程（转岗中）",
     "hero.role2": "DevOps / 平台开发",
     "hero.role3": "全栈开发",
     "hero.ctaWork": "查看作品",
-    "hero.ctaDemo": "在线 Demo",
     "hero.ctaResume": "下载简历",
 
     "stats.years": "年工程经验",
@@ -65,21 +66,12 @@ window.I18N = {
 
 
 
-    "contact.title": "联系我",
-    "contact.email": "邮箱",
-    "contact.emailAlt": "备用邮箱",
-    "contact.wechat": "微信",
-    "contact.qrHint": "点击查看二维码",
-    "contact.qrNote": "添加时请备注来意",
-    "contact.gitee": "代码托管（Gitee）",
-    "contact.github": "GitHub（备用）",
 
     "footer.note": "用静态页面手工写成 · 无框架 · 无追踪"
   },
 
   en: {
     "nav.work": "Work",
-    "nav.contact": "Contact",
 
     "hero.eyebrow": "Open to work · Beijing · Available for travel · 8 yrs",
     "hero.title": "AI Agent Engineering · Platform Engineering",
@@ -99,12 +91,14 @@ window.I18N = {
     "hero.tag.tokencost": "Token cost control",
     "hero.fact.fullstack": "Full-stack",
     "hero.fact.path": "Path",
-    "hero.fact.pathValue": "Network & server ops → Backend → DevOps platform → AI agents",
+    "hero.tag.ops": "Network & server ops",
+    "hero.tag.backendDev": "Backend",
+    "hero.tag.platformDev": "DevOps platform",
+    "hero.tag.agentDev": "Agents",
     "hero.role1": "AI Agent Engineering (transitioning)",
     "hero.role2": "DevOps / Platform",
     "hero.role3": "Full-stack",
     "hero.ctaWork": "View work",
-    "hero.ctaDemo": "Live demo",
     "hero.ctaResume": "Download CV",
 
     "stats.years": "years in engineering",
@@ -142,14 +136,6 @@ window.I18N = {
 
 
 
-    "contact.title": "Contact",
-    "contact.email": "Email",
-    "contact.emailAlt": "Alternative email",
-    "contact.wechat": "WeChat",
-    "contact.qrHint": "Click to show QR code",
-    "contact.qrNote": "Please mention how you found me",
-    "contact.gitee": "Code (Gitee)",
-    "contact.github": "GitHub (backup)",
 
     "footer.note": "Hand-written static site · no framework · no tracking"
   }
