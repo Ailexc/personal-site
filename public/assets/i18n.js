@@ -25,15 +25,8 @@ window.I18N = {
     "hero.tag.backendDev": "后端开发",
     "hero.tag.platformDev": "DevOps 平台",
     "hero.tag.agentDev": "Agent",
-    "hero.role1": "AI Agent 工程（转岗中）",
-    "hero.role2": "DevOps / 平台开发",
-    "hero.role3": "全栈开发",
-    "hero.ctaWork": "查看作品",
     "hero.ctaResume": "下载简历",
 
-    "stats.years": "年工程经验",
-    "stats.systems": "个可运行系统",
-    "stats.ai": "个 AI 项目",
 
 
     "facts.location": "所在地",
@@ -46,7 +39,6 @@ window.I18N = {
     "facts.statusValue": "求职中",
 
 
-    "work.title": "精选项目",
     "work.viewRepo": "查看仓库 →",
     "work.viewIntro": "查看介绍页 →",
     "work.viewLive": "在线预览 →",
@@ -95,15 +87,8 @@ window.I18N = {
     "hero.tag.backendDev": "Backend",
     "hero.tag.platformDev": "DevOps platform",
     "hero.tag.agentDev": "Agents",
-    "hero.role1": "AI Agent Engineering (transitioning)",
-    "hero.role2": "DevOps / Platform",
-    "hero.role3": "Full-stack",
-    "hero.ctaWork": "View work",
     "hero.ctaResume": "Download CV",
 
-    "stats.years": "years in engineering",
-    "stats.systems": "runnable systems",
-    "stats.ai": "AI projects",
 
 
     "facts.location": "Location",
@@ -116,7 +101,6 @@ window.I18N = {
     "facts.statusValue": "Open to work",
 
 
-    "work.title": "Selected work",
     "work.viewRepo": "View repository →",
     "work.viewIntro": "Read case study →",
     "work.viewLive": "Live demo →",

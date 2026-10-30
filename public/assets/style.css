@@ -165,7 +165,7 @@ code {
 .hero {
   /* 单栏：头像已移除，自我介绍改为列表式（hero-facts） */
   display: block;
-  padding: 76px 24px 56px;
+  padding: 76px 24px 8px;
 }
 
 .eyebrow {
@@ -300,39 +300,12 @@ html[data-theme="dark"] .eyebrow {
 .hero-figure img { position: relative; z-index: 1; width: min(320px, 78vw); }
 
 /* ---------- stats ---------- */
-/* Hero 内嵌关键数据：3 列，上下细分隔线，与列表/CTA 分层 */
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-content: start;
-  gap: 40px;
-  margin-top: 30px;
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  max-width: 620px;
-}
-@media (max-width: 640px) {
-  .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
-}
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.stat strong {
-  font-size: 26px;
-  line-height: 1.1;
-  letter-spacing: -1px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 .stat span { font-size: 13px; color: var(--muted); }
 
 /* ---------- sections ---------- */
 .section { padding: 88px 24px; }
+/* 作品区紧跟 Hero（无 section 标题），收紧顶部间距 */
+#work { padding-top: 34px; }
 .section-compact { padding-top: 40px; }
 
 .section-head {
