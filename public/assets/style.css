@@ -313,8 +313,8 @@ html[data-theme="dark"] .eyebrow {
 
 /* ---------- sections ---------- */
 .section { padding: 88px 24px; }
-/* 作品区紧跟 Hero（无 section 标题），收紧顶部间距 */
-#work { padding-top: 34px; }
+/* Hero 底部留白已收紧（padding-bottom: 8px），作品区用中等间距衔接 */
+#work { padding-top: 64px; }
 .section-compact { padding-top: 40px; }
 
 .section-head {
