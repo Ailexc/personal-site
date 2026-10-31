@@ -622,6 +622,91 @@ html[data-theme="dark"] .eyebrow {
 }
 .footer-links a:hover { color: var(--accent); text-decoration: underline; }
 
+/* ---------- visits ---------- */
+.visit-block {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 26px 22px;
+  background: var(--surface);
+}
+.visit-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 48px;
+}
+.visit-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.visit-kpi strong {
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -1.4px;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.visit-kpi span {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.visit-cal-wrap { margin-top: 28px; }
+.visit-cal {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  gap: 4px;
+}
+.vcal-cell {
+  display: block;
+  aspect-ratio: 1 / 1;
+  border-radius: 3px;
+  background: var(--border);
+  opacity: 0;
+  animation: vcal-in .45s ease forwards;
+}
+@keyframes vcal-in {
+  from { opacity: 0; transform: scale(.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.vcal-cell.l0 { background: color-mix(in srgb, var(--border) 70%, transparent); }
+.vcal-cell.l1 { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+.vcal-cell.l2 { background: color-mix(in srgb, var(--accent) 45%, transparent); }
+.vcal-cell.l3 { background: color-mix(in srgb, var(--accent) 70%, transparent); }
+.vcal-cell.l4 { background: var(--accent); }
+.vcal-cell:hover {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 1px;
+}
+
+.visit-cal-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 11.5px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.visit-note {
+  margin: 18px 0 0;
+  font-size: 12.5px;
+  color: var(--muted);
+  opacity: .85;
+}
+
+@media (max-width: 640px) {
+  .visit-block { padding: 22px 18px 18px; }
+  .visit-kpis { gap: 28px; }
+  .visit-cal { gap: 3px; }
+  .vcal-cell { border-radius: 2px; }
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 48px; }

@@ -41,6 +41,11 @@ window.I18N = {
 
 
     "work.viewRepo": "查看仓库 →",
+    "visits.title": "访问统计",
+    "visits.total": "总访问量",
+    "visits.unique": "独立访客",
+    "visits.today": "今日",
+    "visits.note": "自 {since} 起统计 · 每 10 分钟更新",
     "work.viewIntro": "查看介绍页 →",
     "work.viewLive": "在线预览 →",
     "work.devops.kicker": "核心开发 · 七个系统",
@@ -104,6 +109,11 @@ window.I18N = {
 
 
     "work.viewRepo": "View repository →",
+    "visits.title": "Visits",
+    "visits.total": "Total views",
+    "visits.unique": "Unique visitors",
+    "visits.today": "Today",
+    "visits.note": "Counting since {since} · updated every 10 min",
     "work.viewIntro": "Read case study →",
     "work.viewLive": "Live demo →",
     "work.devops.kicker": "Core developer · seven systems",

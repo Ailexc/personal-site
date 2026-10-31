@@ -132,6 +132,40 @@
     </div>
   </section>
 
+  <!-- Visits -->
+  <section class="wrap section" id="visits">
+    <div class="section-head">
+      <span class="section-no">02</span>
+      <h2 data-i18n="visits.title">访问统计</h2>
+    </div>
+
+    <div class="visit-block">
+      <div class="visit-kpis">
+        <div class="visit-kpi">
+          <strong data-kpi="total_pv">—</strong>
+          <span data-i18n="visits.total">总访问量</span>
+        </div>
+        <div class="visit-kpi">
+          <strong data-kpi="total_uv">—</strong>
+          <span data-i18n="visits.unique">独立访客</span>
+        </div>
+        <div class="visit-kpi">
+          <strong data-kpi="today_pv">—</strong>
+          <span data-i18n="visits.today">今日</span>
+        </div>
+      </div>
+
+      <div class="visit-cal-wrap">
+        <div class="visit-cal" id="visitCal" role="img" aria-label="最近 30 天访问热力图"></div>
+        <div class="visit-cal-axis">
+          <span id="calStart"></span>
+          <span id="calEnd"></span>
+        </div>
+      </div>
+
+      <p class="visit-note" id="visitNote" data-i18n="visits.note">自 {since} 起统计 · 每 10 分钟更新</p>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -148,5 +182,6 @@
 
 <script src="/assets/i18n.js"></script>
 <script src="/assets/app.js"></script>
+<script src="/assets/visits.js"></script>
 </body>
 </html>
