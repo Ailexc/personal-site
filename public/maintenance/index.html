@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Demo 暂未开放 · ailexc</title>
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --card: #ffffff;
+    --ink: #16151a;
+    --muted: #6b7280;
+    --line: rgba(22, 21, 26, .1);
+    --accent: #6d5cff;
+    --accent-soft: rgba(109, 92, 255, .1);
+    --warn: #b45309;
+    --warn-soft: rgba(180, 83, 9, .08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0d12;
+      --card: #17161d;
+      --ink: #f2f1f5;
+      --muted: #9aa0aa;
+      --line: rgba(242, 241, 245, .1);
+      --accent: #a99cff;
+      --accent-soft: rgba(169, 156, 255, .12);
+      --warn: #f0b267;
+      --warn-soft: rgba(240, 178, 103, .1);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 32px 20px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .card {
+    width: 100%;
+    max-width: 520px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 40px 36px 32px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 12px 40px -12px rgba(0, 0, 0, .12);
+  }
+  .brand {
+    margin: 0 0 26px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -.2px;
+    color: var(--muted);
+  }
+  .brand b { color: var(--ink); }
+  h1 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.3;
+    letter-spacing: -.5px;
+  }
+  .lede {
+    margin: 12px 0 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+  .lede strong { color: var(--ink); font-weight: 650; }
+
+  .panel {
+    margin: 26px 0 0;
+    padding: 18px 20px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    border: 1px solid transparent;
+  }
+  .panel.is-warn {
+    background: var(--warn-soft);
+    color: var(--warn);
+  }
+  .panel-label {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 650;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .panel.is-warn .panel-label { color: var(--warn); }
+  .countdown {
+    margin: 6px 0 0;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -.6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .countdown small {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--muted);
+    margin-left: 2px;
+  }
+  .now {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .foot {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    align-items: center;
+    font-size: 14px;
+  }
+  .foot a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .foot a:hover { border-bottom-color: currentColor; }
+  .foot .mail { color: var(--muted); font-weight: 500; }
+
+  .hint {
+    margin: 22px 0 0;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--muted);
+    opacity: .8;
+  }
+  @media (max-width: 480px) {
+    .card { padding: 32px 24px 26px; border-radius: 16px; }
+    h1 { font-size: 22px; }
+    .countdown { font-size: 21px; }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <p class="brand"><b>ailexc</b> · 在线 Demo</p>
+
+    <h1 id="title">当前不在开放时间</h1>
+    <p class="lede" id="lede">
+      Demo 环境采用按需开关机控制成本，<strong>每日 09:00 – 21:00（北京时间）</strong>开放，
+      其余时间暂停服务。
+    </p>
+
+    <section class="panel" id="panel">
+      <p class="panel-label" id="panelLabel">距离下次开放</p>
+      <p class="countdown" id="countdown">—</p>
+      <p class="now" id="now"></p>
+    </section>
+
+    <div class="foot">
+      <a href="https://ailexc.com/">← 个人主页</a>
+      <a href="https://devops.ailexc.com/index.html">项目介绍</a>
+      <span class="mail">长期不可用请联系 1601058771@qq.com</span>
+    </div>
+
+    <p class="hint">
+      如果你是在开放时段看到这个页面，说明服务正在启动或遇到临时故障，通常几分钟内会恢复，稍后刷新即可。
+    </p>
+  </main>
+
+<script>
+(function () {
+  "use strict";
+
+  var OPEN_HOUR = 9;    // 每日开放（北京时间）
+  var CLOSE_HOUR = 21;  // 每日关闭（北京时间）
+  var TZ = "Asia/Shanghai";
+
+  var elTitle = document.getElementById("title");
+  var elLede = document.getElementById("lede");
+  var elPanel = document.getElementById("panel");
+  var elLabel = document.getElementById("panelLabel");
+  var elCountdown = document.getElementById("countdown");
+  var elNow = document.getElementById("now");
+
+  // 取北京时间的分量（不依赖访问者本机时区）
+  function bjParts() {
+    var fmt = new Intl.DateTimeFormat("zh-CN", {
+      timeZone: TZ, hour12: false,
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", second: "2-digit",
+      weekday: "short"
+    });
+    var out = {};
+    var parts = fmt.formatToParts(new Date());
+    for (var i = 0; i < parts.length; i++) {
+      out[parts[i].type] = parts[i].value;
+    }
+    return out;
+  }
+
+  // 以北京时间为准构造 Date（后续做时间差运算）
+  function bjNow() {
+    var p = bjParts();
+    var hh = p.hour === "24" ? "00" : p.hour;
+    return {
+      date: new Date(p.year + "-" + p.month + "-" + p.day + "T" + hh + ":" + p.minute + ":" + p.second + "+08:00"),
+      label: p.year + "-" + p.month + "-" + p.day + " " + hh + ":" + p.minute + ":" + p.second,
+      weekday: p.weekday,
+      hour: parseInt(hh, 10)
+    };
+  }
+
+  function pad(n) { return n < 10 ? "0" + n : String(n); }
+
+  function render() {
+    var now = bjNow();
+    var hour = now.hour;
+
+    // 在开放窗口内却看到本页 → 服务异常/启动中，而非计划关机
+    var inWindow = hour >= OPEN_HOUR && hour < CLOSE_HOUR;
+
+    var target = new Date(now.date.getTime());
+    if (inWindow || hour >= CLOSE_HOUR) {
+      // 下一次开放是明天 09:00
+      target.setDate(target.getDate() + 1);
+    }
+    target.setHours(OPEN_HOUR, 0, 0, 0);
+
+    if (inWindow) {
+      elTitle.textContent = "服务正在启动或临时异常";
+      elLede.innerHTML = "当前处于开放时段（每日 <strong>09:00 – 21:00</strong>），" +
+        "但服务暂未响应，通常几分钟内会恢复，请稍后刷新。";
+      elPanel.classList.add("is-warn");
+      elLabel.textContent = "若持续无法访问";
+      elCountdown.innerHTML = "请联系我<small> 1601058771@qq.com</small>";
+    } else {
+      var ms = target.getTime() - now.date.getTime();
+      if (ms < 0) ms = 0;
+      var totalSec = Math.floor(ms / 1000);
+      var hh = Math.floor(totalSec / 3600);
+      var mm = Math.floor((totalSec % 3600) / 60);
+      var ss = totalSec % 60;
+      elPanel.classList.remove("is-warn");
+      elLabel.textContent = "距离下次开放";
+      elCountdown.innerHTML =
+        hh + "<small> 小时 </small>" + pad(mm) + "<small> 分 </small>" + pad(ss) + "<small> 秒</small>";
+    }
+
+    elNow.textContent = "现在：" + now.label + "（" + now.weekday + "）北京时间";
+  }
+
+  render();
+  setInterval(render, 1000);
+})();
+</script>
+</body>
+</html>
