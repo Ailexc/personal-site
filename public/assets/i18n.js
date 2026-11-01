@@ -43,9 +43,24 @@ window.I18N = {
     "work.viewRepo": "查看仓库 →",
     "visits.title": "访问统计",
     "visits.total": "总访问量",
-    "visits.unique": "独立访客",
+    "visits.unique": "访客",
     "visits.today": "今日",
     "visits.note": "自 {since} 起统计 · 每 10 分钟更新",
+    "visits.cellTip": "{d} · {pv} 次浏览 / {uv} 位访客",
+    "visits.calLabel": "最近 30 天访问量，可点选某天查看当天数据",
+    "clicks.title": "项目点击",
+    "clicks.preview": "预览",
+    "clicks.intro": "介绍页",
+    "clicks.repo": "仓库",
+    "clicks.note": "按访客去重 · 同一人多点只算一人",
+    "clicks.total": "共 {pv} 次 · {uv} 人",
+    "clicks.empty": "还没有点击数据 · 从主页点开项目后开始累计",
+    "clicks.people": "{n} 人",
+    "clicks.detail": "{uv} 人 · 共 {pv} 次｜预览 {live} · 介绍页 {intro} · 仓库 {repo}",
+    "clicks.p.devops": "DevOps 平台全家桶",
+    "clicks.p.cumi": "AiCumi",
+    "clicks.p.review": "AiCodeReviewTeam",
+    "clicks.p.anytra": "AI 随心记",
     "work.viewIntro": "查看介绍页 →",
     "work.viewLive": "在线预览 →",
     "work.title": "精选项目",
@@ -66,7 +81,7 @@ window.I18N = {
 
 
 
-    "footer.note": "用静态页面手工写成 · 无框架 · 无追踪"
+    "footer.note": "用静态页面手工写成 · 无框架 · 无 Cookie · 无第三方脚本"
   },
 
   en: {
@@ -112,9 +127,24 @@ window.I18N = {
     "work.viewRepo": "View repository →",
     "visits.title": "Visits",
     "visits.total": "Total views",
-    "visits.unique": "Unique visitors",
+    "visits.unique": "Visitors",
     "visits.today": "Today",
     "visits.note": "Counting since {since} · updated every 10 min",
+    "visits.cellTip": "{d} · {pv} views / {uv} visitors",
+    "visits.calLabel": "Visits over the last 30 days; pick a day to see its count",
+    "clicks.title": "Project clicks",
+    "clicks.preview": "Preview",
+    "clicks.intro": "Overview",
+    "clicks.repo": "Repo",
+    "clicks.note": "Deduplicated by visitor · repeated clicks count once",
+    "clicks.total": "{pv} clicks · {uv} people",
+    "clicks.empty": "No clicks yet · starts counting when a project link is opened",
+    "clicks.people": "{n} people",
+    "clicks.detail": "{uv} people · {pv} clicks｜preview {live} · overview {intro} · repo {repo}",
+    "clicks.p.devops": "DevOps Platform",
+    "clicks.p.cumi": "AiCumi",
+    "clicks.p.review": "AiCodeReviewTeam",
+    "clicks.p.anytra": "AI Memo",
     "work.viewIntro": "Read case study →",
     "work.viewLive": "Live demo →",
     "work.title": "Selected work",
@@ -135,6 +165,6 @@ window.I18N = {
 
 
 
-    "footer.note": "Hand-written static site · no framework · no tracking"
+    "footer.note": "Hand-written static site · no framework · no cookies · no third-party scripts"
   }
 };

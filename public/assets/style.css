@@ -662,13 +662,23 @@ html[data-theme="dark"] .eyebrow {
   grid-template-columns: repeat(30, 1fr);
   gap: 4px;
 }
+/* 格子是 <button>：可点击、可聚焦、可被读屏识别 */
 .vcal-cell {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
   display: block;
+  width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 3px;
   background: var(--border);
+  cursor: pointer;
   opacity: 0;
   animation: vcal-in .45s ease forwards;
+  transition: outline-color .15s ease, transform .15s ease;
 }
 @keyframes vcal-in {
   from { opacity: 0; transform: scale(.7); }
@@ -679,9 +689,16 @@ html[data-theme="dark"] .eyebrow {
 .vcal-cell.l2 { background: color-mix(in srgb, var(--accent) 45%, transparent); }
 .vcal-cell.l3 { background: color-mix(in srgb, var(--accent) 70%, transparent); }
 .vcal-cell.l4 { background: var(--accent); }
-.vcal-cell:hover {
-  outline: 2px solid var(--accent-2);
-  outline-offset: 1px;
+.vcal-cell:hover { outline: 2px solid var(--accent-2); outline-offset: 1px; }
+.vcal-cell.is-active {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  transform: scale(1.12);
+  z-index: 1;
+}
+.vcal-cell:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .visit-cal-axis {
@@ -700,11 +717,156 @@ html[data-theme="dark"] .eyebrow {
   opacity: .85;
 }
 
+/* ---------- 项目点击（分段堆叠条） ---------- */
+.click-block {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+.click-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.click-head h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-2);
+  letter-spacing: -.2px;
+}
+.click-total {
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.click-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+}
+.click-row {
+  display: grid;
+  /* 条最宽 320px：宽屏上拉满整行会把合计数字推得很远，眼睛要跨越一整行 */
+  grid-template-columns: 148px minmax(0, 320px) 38px;
+  justify-content: start;
+  align-items: center;
+  gap: 14px;
+  transition: opacity .2s ease;
+}
+/* 悬停聚焦：当前行提亮，其余淡出 */
+.click-list:hover .click-row { opacity: .42; }
+.click-list .click-row:hover { opacity: 1; }
+
+.click-name {
+  font-size: 13px;
+  color: var(--text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.click-bar {
+  display: flex;
+  gap: 2px;
+  height: 24px;
+  align-items: stretch;
+  border-radius: 6px;
+  overflow: hidden;
+  /* 入场：从左往右揭开（clip-path 不影响文字形状） */
+  animation: bar-reveal .75s cubic-bezier(.22, .61, .36, 1) backwards;
+}
+@keyframes bar-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+.click-row:nth-child(1) .click-bar { animation-delay: .05s; }
+.click-row:nth-child(2) .click-bar { animation-delay: .13s; }
+.click-row:nth-child(3) .click-bar { animation-delay: .21s; }
+.click-row:nth-child(4) .click-bar { animation-delay: .29s; }
+
+.seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  font-size: 11.5px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: filter .2s ease;
+}
+.click-row:hover .seg { filter: brightness(1.06); }
+.seg-live  { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+.seg-intro { background: color-mix(in srgb, var(--accent) 46%, var(--surface)); color: var(--text); }
+.seg-repo  { background: color-mix(in srgb, var(--accent) 22%, var(--surface)); color: var(--text-2); }
+
+.click-sum {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* [hidden] 的默认 display:none 会被 display:flex 覆盖，必须显式声明 */
+.click-foot[hidden],
+.click-block[hidden] { display: none; }
+.click-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-top: 14px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.click-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.click-legend .lg {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+.click-legend .lg:first-child { margin-left: 0; }
+.lg-live  { background: var(--accent); }
+.lg-intro { background: color-mix(in srgb, var(--accent) 46%, var(--surface)); }
+.lg-repo  { background: color-mix(in srgb, var(--accent) 22%, var(--surface)); }
+
+/* 零状态：还没产生点击时给一行说明，不留空白 */
+.click-empty {
+  margin: 0;
+  padding: 14px 0 2px;
+  font-size: 12.5px;
+  color: var(--muted);
+  opacity: .8;
+}
+
 @media (max-width: 640px) {
   .visit-block { padding: 22px 18px 18px; }
   .visit-kpis { gap: 28px; }
-  .visit-cal { gap: 3px; }
-  .vcal-cell { border-radius: 2px; }
+  /* 手机上 30 格挤一行每格只有 5px，手指按不准：
+     改 5 列 × 6 行（每格约 45px），触控目标才够大 */
+  .visit-cal { grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .vcal-cell { border-radius: 4px; }
+  .click-row {
+    grid-template-columns: minmax(0, 1fr) 38px;
+    row-gap: 5px;
+    column-gap: 10px;
+  }
+  .click-name { grid-column: 1 / -1; }
+  .click-bar { height: 24px; }
+  .click-head { margin-bottom: 12px; }
 }
 
 /* ---------- responsive ---------- */

@@ -1,0 +1,5 @@
+{
+  "ips": [],
+  "hashes": [],
+  "_note": "模板文件：仓库里不放真实 IP/指纹。实际部署时在 ali-light:/home/admin/caddy-stats/excludes.json 填自己的 IP 与指纹，然后跑 --rebuild 重算。查看指纹：python3 collect-visits.py --list-visitors"
+}
